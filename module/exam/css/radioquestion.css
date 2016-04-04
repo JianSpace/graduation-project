@@ -1,0 +1,193 @@
+html {
+  font-size: 62.5%; }
+
+a {
+  text-decoration: none; }
+
+body, h1, h2, h3, ul, ol, p, section, dl, dd {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+input {
+  border: none; }
+
+.cleardiv {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+.borderfix {
+  border-top: 0; }
+
+html, body {
+  background-color: white;
+  font-size: 100%;
+  min-width: 660px; }
+
+.gradient {
+  height: 80px;
+  background: RGB(186, 204, 228);
+  background: -moz-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, RGB(186, 204, 228)), color-stop(100%, RGB(255, 255, 255)));
+  background: -webkit-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -o-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -ms-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: linear-gradient(to bottom, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0); }
+  .gradient span {
+    float: right;
+    margin-right: 240px;
+    font-size: 20px;
+    color: RGB(2, 57, 139);
+    line-height: 70px;
+    text-align: center; }
+
+.container-exam {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  background: #FFFFFF;
+  position: relative; }
+  .container-exam .pointer {
+    height: 70px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative; }
+    .container-exam .pointer .progress_self {
+      position: relative;
+      top: 40%;
+      width: 70%;
+      float: left; }
+      .container-exam .pointer .progress_self .progress-bar {
+        margin: 0 20px;
+        width: 94%;
+        height: 12px;
+        background-color: white;
+        /*border: 1px solid black;*/
+        border-radius: 10px; }
+        .container-exam .pointer .progress_self .progress-bar .progress-percent {
+          width: 5%;
+          height: 12px;
+          border-radius: 10px 0 0 10px;
+          background-color: #337AB7;
+          position: relative; }
+          .container-exam .pointer .progress_self .progress-bar .progress-percent .hint {
+            position: absolute;
+            z-index: 99;
+            top: -45px;
+            right: -25px;
+            width: 50px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #337AB7;
+            line-height: 30px;
+            color: white;
+            text-align: center; }
+            .container-exam .pointer .progress_self .progress-bar .progress-percent .hint .triangle {
+              width: 0;
+              height: 0;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-top: 8px solid #337AB7;
+              position: absolute;
+              bottom: -8px;
+              left: calc(50% - 6px); }
+    .container-exam .pointer .counter {
+      float: right;
+      width: 30%;
+      height: 70px;
+      background-color: white;
+      border-left: 2px solid white;
+      color: black;
+      font-size: 32px;
+      text-align: center;
+      line-height: 70px;
+      border-radius: 5px; }
+  .container-exam .lecture {
+    background-image: url("../img/icoq.png");
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+    height: 50px;
+    text-indent: 55px;
+    border-bottom: 1px solid #EAEAEA;
+    line-height: 50px; }
+  .container-exam form .title {
+    display: block;
+    text-indent: 20px;
+    margin-top: 20px; }
+  .container-exam label {
+    font-weight: normal;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #CACACA;
+    margin: 20px 20px 0 20px;
+    padding-left: 20px;
+    cursor: pointer; }
+    .container-exam label input {
+      vertical-align: text-bottom;
+      margin-bottom: 2px; }
+  .container-exam label:hover, .container-exam label:active {
+    color: #2B80FF;
+    border-color: #2B80FF;
+    background-color: #F0F0F0; }
+  .container-exam .buttons {
+    margin-left: 70%;
+    margin-top: 20px;
+    /*padding-bottom: 40px;*/ }
+    .container-exam .buttons .button {
+      display: inline-block;
+      height: 36px;
+      width: 100px;
+      background: #FF4C31;
+      text-align: center;
+      line-height: 36px;
+      border-radius: 2px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer; }
+    .container-exam .buttons .nextitem {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 8px; }
+  .container-exam .answersheet .title {
+    display: block;
+    margin: 20px 0 0 20px;
+    padding-bottom: 20px;
+    color: gray;
+    cursor: pointer;
+    font-family: '黑体';
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 90px 0; }
+  .container-exam .answersheet ul {
+    margin: 0 20px;
+    padding-bottom: 20px; }
+  .container-exam .answersheet li {
+    width: 40px;
+    height: 42px;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+    line-height: 42px;
+    color: #8B8C8D;
+    font-weight: bold;
+    cursor: pointer; }
+  .container-exam .answersheet .on {
+    color: white;
+    background-color: #337AB7; }
+  .container-exam .answersheet li:hover, .container-exam .answersheet li:active {
+    color: white;
+    background-color: #337AB7; }
+
+/*# sourceMappingURL=radioquestion.css.map */

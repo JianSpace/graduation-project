@@ -1,0 +1,116 @@
+body, h1, h2, h3, ul, ol, li, p {
+  margin: 0;
+  padding-top: 0;
+  list-style: none;
+  text-decoration: none; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.gradient {
+  height: 80px;
+  background: RGB(186, 204, 228);
+  background: -moz-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, RGB(186, 204, 228)), color-stop(100%, RGB(255, 255, 255)));
+  background: -webkit-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -o-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -ms-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: linear-gradient(to bottom, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0); }
+  .gradient span {
+    float: right;
+    margin-right: 240px;
+    font-size: 20px;
+    color: RGB(2, 57, 139);
+    line-height: 70px;
+    text-align: center; }
+
+.content {
+  margin: 0 auto;
+  width: 890px;
+  position: relative; }
+  .content h2 {
+    margin-top: -10px;
+    color: RGB(26, 103, 181);
+    font-weight: bold; }
+  .content .welcome > a:link, .content .welcome > a:visited {
+    color: black;
+    font-weight: bold;
+    text-decoration: none; }
+  .content .welcome > a:hover, .content .welcome > a:active {
+    text-decoration: none;
+    color: #1A67B5; }
+  .content .welcome {
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .content .welcome .dropdown {
+      position: relative;
+      cursor: pointer; }
+      .content .welcome .dropdown .triangle {
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid #1A67B5;
+        position: absolute;
+        bottom: 4px;
+        right: -14px; }
+
+.content-login {
+  margin-top: 40px;
+  width: 890px;
+  height: 400px; }
+  .content-login .start_exam {
+    float: left;
+    width: 70%; }
+    .content-login .start_exam .exam_ico {
+      display: block;
+      float: left;
+      width: 140px;
+      height: 150px;
+      background: url(../../../resource/img/target.png) no-repeat;
+      background-size: contain; }
+    .content-login .start_exam .exam_info {
+      float: left;
+      height: 150px;
+      margin-top: 30px;
+      margin-left: 30px; }
+    .content-login .start_exam .exam_notice {
+      background: #F0F0F0;
+      text-indent: 2rem;
+      padding: 20px 0; }
+      .content-login .start_exam .exam_notice p {
+        line-height: 2; }
+    .content-login .start_exam .start_button {
+      margin-top: 20px;
+      text-align: center; }
+    .content-login .start_exam #start_button {
+      padding: 8px 20px; }
+  .content-login .info_control {
+    float: right;
+    width: 30%;
+    height: 405px;
+    text-indent: 2rem; }
+    .content-login .info_control .student_info_notice {
+      line-height: 3;
+      border-bottom: 1px solid #E5E5E5; }
+    .content-login .info_control .userphoto {
+      display: block;
+      max-width: 150px;
+      max-height: 200px;
+      margin: 4px auto; }
+
+.main {
+  width: 500px;
+  margin: 20px auto;
+  text-align: center; }
+
+/*# sourceMappingURL=index.css.map */
