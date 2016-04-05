@@ -12,6 +12,11 @@ session_start();
 	<script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="../..//js/lib/bootstrap.js"></script>
 	<script type="text/javascript" src="../../js/myfunction.js"></script>
+	<style type="text/css">
+		.right_number {
+			color: #337AB7;
+		} 
+	</style>
 </head>
 <body>
 	<header>
@@ -27,20 +32,20 @@ session_start();
 					<i class="exam_ico"></i>
 					<div class="exam_info">
 						<p>题目类型： 选择题</p>
-						<p>完成时间： 60分钟</p>
+						<p>完成时间： 120分钟</p>
 						<p>题目数量： 20道</p>
 						<p>总分： 100分</p>
 					</div>
 				</div>
 				<div class="exam_notice">
-					<p>1、请在规定时间完成试卷内全部题目，考试时间结束，系统将自动交卷。</p>
-					<p>2、所有题目可通过答题卡返回修改，点击提前交卷后试卷提交，将无法继续答案，请谨慎提交。</p>
-					<p>3、请诚信答题，独立完成。</p>
-					<p>4、祝你好运。</p>
+					<p>您的成绩如下：</p>
+					<p>正确题数：<span class="right_number"></span>/20</p>
+					<p class="grade"></p>
+					<p class="time"></p>
 				</div>
 				<div class="form-group" id="btn-form">
 			        <div class="start_button">
-			            <button type="button" class="btn btn-primary" id="start_button">开始答题</button>
+			            <button type="button" class="btn btn-primary" id="start_button">查看答案与解析</button>
 			        </div>
 			    </div>
 			</div>
@@ -58,17 +63,29 @@ session_start();
 					    <li><a href="../../index.php">退出</a></li>
 		            </ul>
 			    </li>
-			    <p class="student_info_notice">您的个人信息如下:</p>
+			    <p class="student_info_notice">该套试卷的成绩排名如下:</p>
 			    <br/ >
-			    <p>用户名：<?php echo $_SESSION['username']; ?></p>
-			    <p>姓名：<?php echo $data['name']; ?></p>
-			    <p>学号：<?php echo $data['student_number']; ?></p>
-			    <p>专业：<?php echo $data['major']; ?></p>
-			    <p>电子邮件：<?php echo $data['email']; ?></p>
-			    <p>照片：</p>
-			   <img class="userphoto" src="../../resource/img/userphoto/dog.jpg" />
+			    <p>1:HuJian</p>
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript">
+	$.ajax({
+		type: 'get',
+		dataType: 'json',
+		url: 'exam_grade.json',
+		success: function (data) {
+			// console.log(JSON.stringify(data));
+			console.log(data.error_question.length);
+			var error_number = data.error_question.length;
+			var grade = 100 - (error_number * 5);
+			$('.right_number').html(20 - error_number);
+			$('.grade').html('得分：' + grade);
+		},
+		error: function () {
+			console.log('连接失败');
+		}
+	});
+	</script>
 </body>
 </html>
