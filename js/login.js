@@ -1,6 +1,5 @@
 $(document).ready(function () {
 	$('#submit').click(function () {
-		//alert($('#teacher')[0].checked);
 		var username = $('#username').val();
 		if ($('#teacher')[0].checked) {    //原生方法
 			$.ajax({
@@ -23,7 +22,6 @@ $(document).ready(function () {
 			});
 		}
 		else if ($('#student')[0].checked) {
-			// alert("功能尚未开通！");
 			$.ajax({
 				type: 'POST',
 				url: 'module/exam/handle/login.handle.php',
