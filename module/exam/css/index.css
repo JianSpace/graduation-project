@@ -1,7 +1,13 @@
-body, h1, h2, h3, ul, ol, li, p {
+body, h1, h2, h3, ul, ol, p {
   margin: 0;
-  padding-top: 0;
+  padding: 0; }
+
+li {
   list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
   text-decoration: none; }
 
 .clearfix {
@@ -34,12 +40,14 @@ body, h1, h2, h3, ul, ol, li, p {
 
 .content {
   margin: 0 auto;
-  width: 890px;
-  position: relative; }
+  width: 890px; }
   .content h2 {
     margin-top: -10px;
     color: RGB(26, 103, 181);
     font-weight: bold; }
+
+.content {
+  position: relative; }
   .content .welcome > a:link, .content .welcome > a:visited {
     color: black;
     font-weight: bold;
