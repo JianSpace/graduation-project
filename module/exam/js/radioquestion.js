@@ -22,6 +22,7 @@ $(function () {
 	var saveSelectedData = [];
 	// 题目是否作答标记
 	var isAnswered = [];
+	var item_num = '';
 
 
 	// 倒计时
@@ -162,7 +163,7 @@ $(function () {
 
 				// 点击题目时返回已回答的题目样式
 				var item_transform = {"A":"0","B":"1","C":'2',"D":'3','':''};
-				var item_num = item_transform[saveSelectedData[num]];
+				item_num = item_transform[saveSelectedData[num]];
 
 					// 清空所有样式
 				if (item_num === '') {
@@ -213,8 +214,8 @@ $(function () {
 			radio[i].addEventListener('click', function () {
 				saveSelectedData[num] = this.value;
 				isAnswered[num] = true;
-				console.log(saveSelectedData);
-				console.log(isAnswered);
+				// console.log(saveSelectedData);
+				// console.log(isAnswered);
 			});
 		}
 		for (var j = 0; j < 20; j++) {
@@ -226,23 +227,23 @@ $(function () {
 	btnNextItem.addEventListener('click', function () {
 		if (num === 19) {
 			$.ajax({
-				type: 'POST',
+				type: 'get',
 				url: 'handle/exam.grade.handle.php',
 				data: {
 					student_answer: saveSelectedData
 				},
+				dataType: 'json',
 				success: function (data) {
+						// console.log(data);	
 					window.location.href = '../exam/grade.php';
-						// console.log(JSON.stringify(data));						
 					},
 				error: function () {
 					alert('连接好像失败了！');
 				}
-				});
+			});
 		}
 	});
 
-
 	requestData();
-	
+
 });
