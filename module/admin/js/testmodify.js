@@ -1,35 +1,45 @@
-#!/bin/sh
-#
-# An example hook script to prepare the commit log message.
-# Called by "git commit" with the name of the file that has the
-# commit message, followed by the description of the commit
-# message's source.  The hook's purpose is to edit the commit
-# message file.  If the hook fails with a non-zero status,
-# the commit is aborted.
-#
-# To enable this hook, rename this file to "prepare-commit-msg".
-
-# This hook includes three examples.  The first comments out the
-# "Conflicts:" part of a merge commit.
-#
-# The second includes the output of "git diff --name-status -r"
-# into the message, just before the "git status" output.  It is
-# commented because it doesn't cope with --amend or with squashed
-# commits.
-#
-# The third example adds a Signed-off-by line to the message, that can
-# still be edited.  This is rarely a good idea.
-
-case "$2,$3" in
-  merge,)
-    /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
-
-# ,|template,)
-#   /usr/bin/perl -i.bak -pe '
-#      print "\n" . `git diff --cached --name-status -r`
-#	 if /^#/ && $first++ == 0' "$1" ;;
-
-  *) ;;
-esac
-
-# SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p'
+$(document).ready(function () {
+	$('#btn_submit').click(function () {
+		if ($('#js-input_title').val() === '' || $('#js-input_answer').val() === '') {
+			alert("标题和答案不能为空!");
+			}
+		else {
+			$.ajax({
+				type: 'POST',
+				url: 'handle/testmodify.handle.php',
+				dataType: 'json',
+				data: {
+					id: $('#js-sendid').val(),
+					title: $('#js-input_title').val(),
+					A: $('#js-input_a').val(),
+					B: $('#js-input_b').val(),
+					C: $('#js-input_c').val(),
+					D: $('#js-input_d').val(),
+					answer: $('#js-input_answer').val(),
+					analysis: $('#js-input_analysis').val()
+				},
+				success: function (data) {
+					if (data.success) {
+						$('#info').html(data.message);
+						$('#info').css('color','green');
+						}
+					else {
+						$('#info').html(data.message);
+						$('#info').css('color','red');
+						}
+				}
+			});
+		}
+	});
+	
+	// reset content
+	$('#btn_reset').click(function () {
+			$('#js-input_title').val('');
+			$('#js-input_a').val('');
+			$('#js-input_b').val('');
+			$('#js-input_c').val('');
+			$('#js-input_d').val('');
+			$('#js-input_answer').val('');
+			$('#js-input_analysis').val('');
+		});				
+})
