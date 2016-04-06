@@ -6,10 +6,10 @@ session_start();
 <head>
 	<meta charset="UTF-8">
 	<title>试题管理系统</title>
-	<script type="text/javascript" src="\testbank/js/lib/jquery-2.1.4.js"></script>
-	<script type="text/javascript" src="\testbank/js/lib/bootstrap.js"></script>
-	<link rel="stylesheet" type="text/css" href="\testbank/css/lib/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="\testbank/css/index.css">
+	<script type="text/javascript" src="\testbank/graduation-project/js/lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="\testbank/graduation-project/js/lib/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="\testbank/graduation-project/css/lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="\testbank/graduation-project/css/index.css">
 </head>
 <body>
 <!-- nav -->

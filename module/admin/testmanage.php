@@ -17,11 +17,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>试题管理</title>
-	<script type="text/javascript" src="\testbank/js/lib/jquery-2.1.4.js"></script>
-	<script type="text/javascript" src="\testbank/js/lib/bootstrap.js"></script>
+	<script type="text/javascript" src="\testbank/graduation-project/js/lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="\testbank/graduation-project/js/lib/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="\testbank/graduation-project/css/lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="\testbank/graduation-project/css/index.css">
     <script type="text/javascript" src="js/testmanage.js"></script>
-	<link rel="stylesheet" type="text/css" href="\testbank/css/lib/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="\testbank/css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/testinput.css">
 </head>
 <body>
@@ -79,12 +79,12 @@
 	<!-- sidebar -->
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
-				<li class="active"><a href="admin.php">首页</a></li>
+				<li><a href="admin.php">首页</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
 				<li><a href="testinput.php">试题录入</a></li>
                 <li><a href="testselect.php">试题查询</a></li>
-                <li><a href="testmanage.php">试题管理</a></li>
+                <li  class="active"><a href="testmanage.php">试题管理</a></li>
 				<li><a href="#">试题组卷</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
