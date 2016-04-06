@@ -1,0 +1,75 @@
+body, h1, h2, h3, ul, ol, p {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.gradient {
+  height: 80px;
+  background: RGB(186, 204, 228);
+  background: -moz-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, RGB(186, 204, 228)), color-stop(100%, RGB(255, 255, 255)));
+  background: -webkit-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -o-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: -ms-linear-gradient(top, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  background: linear-gradient(to bottom, RGB(186, 204, 228) 0%, RGB(255, 255, 255) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0); }
+  .gradient span {
+    float: right;
+    margin-right: 240px;
+    font-size: 20px;
+    color: RGB(2, 57, 139);
+    line-height: 70px;
+    text-align: center; }
+
+.content {
+  margin: 0 auto;
+  width: 890px; }
+  .content h2 {
+    margin-top: -10px;
+    color: RGB(26, 103, 181);
+    font-weight: bold; }
+
+.right {
+  background-color: #1ABC9C; }
+
+.error {
+  background-color: #FF431E; }
+
+.content .questions_num-container {
+  height: 120px;
+  cursor: default;
+  margin: 20px 0 0px 10px; }
+  .content .questions_num-container .questions_num {
+    margin: 20px 0 0px 0px; }
+    .content .questions_num-container .questions_num li {
+      float: left;
+      width: 32px;
+      height: 32px;
+      background-color: #1ABC9C;
+      color: white;
+      margin-right: 5px;
+      text-align: center;
+      line-height: 32px; }
+      .content .questions_num-container .questions_num li:hover {
+        height: 48px;
+        margin-top: -8px;
+        line-height: 48px; }
+
+/*# sourceMappingURL=answer_analysis.css.map */
