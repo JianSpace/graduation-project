@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>成绩与解析</title>
+	<title>考试成绩</title>
 	<link rel="stylesheet" type="text/css" href="../../css/lib/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
@@ -17,6 +17,13 @@ session_start();
 			color: #337AB7;
 		} 
 	</style>
+	<script type="text/javascript">
+		$(function () {
+			$('#answer').on('click', function () {
+				window.location.href = 'answer_analysis.php';
+			})
+		})
+	</script>
 </head>
 <body>
 	<header>
@@ -45,7 +52,7 @@ session_start();
 				</div>
 				<div class="form-group" id="btn-form">
 			        <div class="start_button">
-			            <button type="button" class="btn btn-primary" id="start_button">查看答案与解析</button>
+			            <button type="button" class="btn btn-primary" id="answer">查看答案与解析</button>
 			        </div>
 			    </div>
 			</div>
