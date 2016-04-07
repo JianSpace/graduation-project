@@ -16,8 +16,6 @@ while ($analysis_row = mysql_fetch_row($analysis_query)) {
 	$analysis[] = $analysis_row[0];
 };
 
-// $answer = json_encode($dataAnswer);
-
 $error_question = array();
 
 for ($i = 0; $i < count($dataAnswer); $i++) {
@@ -25,7 +23,8 @@ for ($i = 0; $i < count($dataAnswer); $i++) {
 		$error_question[] = $i;
 	}
 }
-$question_array = array('error_question' => $error_question, 'analysis' => $analysis);
+
+$question_array = array('error_question' => $error_question, 'analysis' => $analysis, 'student_answer' => $student_answer, 'right_answer' => $dataAnswer);
 
 $exam_grade = '../exam_grade.json';
 if (file_exists($exam_grade)) {
