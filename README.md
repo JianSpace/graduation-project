@@ -1,3 +1,3 @@
 # graduation-project
 backups...
-![](https://github.com/JianSpace/graduation-project/screenshot/register.png)
+![](https://github.com/JianSpace/graduation-project/blob/master/screenshot/register.png)
