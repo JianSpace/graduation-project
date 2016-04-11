@@ -7,7 +7,10 @@ li {
   margin: 0;
   padding: 0; }
 
-a {
+a:link, a:visited {
+  text-decoration: none; }
+
+a:hover, a:active {
   text-decoration: none; }
 
 .clearfix {
@@ -46,16 +49,37 @@ a {
     color: RGB(26, 103, 181);
     font-weight: bold; }
 
+.answer_right {
+  color: #337AC6; }
+
+.answer_error {
+  color: red; }
+
+.right_question_num {
+  background-color: #1ABC9C; }
+
+.error_question_num {
+  background-color: #FF431E; }
+
+body {
+  padding-bottom: 50px; }
+
 .right {
   background-color: #1ABC9C; }
 
 .error {
   background-color: #FF431E; }
 
+.content .head h2 {
+  margin-left: -4px;
+  float: left; }
+.content .head .welcome {
+  float: right;
+  margin-right: 20px; }
 .content .questions_num-container {
   height: 120px;
   cursor: default;
-  margin: 20px 0 0px 10px; }
+  margin: 20px 0 0px 0px; }
   .content .questions_num-container .questions_num {
     margin: 20px 0 0px 0px; }
     .content .questions_num-container .questions_num li {
@@ -70,6 +94,42 @@ a {
       .content .questions_num-container .questions_num li:hover {
         height: 48px;
         margin-top: -8px;
-        line-height: 48px; }
+        line-height: 48px;
+        font-size: 18px; }
+.content .title {
+  padding: 30px 0 50px 0;
+  border-top: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED; }
+  .content .title .title-content {
+    height: 20px;
+    line-height: center; }
+  .content .title .title-number {
+    display: inline-block;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    background-color: #1ABC9C;
+    line-height: 22px;
+    color: white;
+    margin-right: 8px; }
+.content .questions_item_title {
+  margin-top: 20px; }
+  .content .questions_item_title .right_answer {
+    margin-right: 20px; }
+  .content .questions_item_title .right_or_wrong {
+    margin-left: 8px; }
+.content .questions_item li {
+  text-indent: 1em;
+  padding: 12px 0 12px 0;
+  margin-top: 20px;
+  border: 1px solid #D4D4D4;
+  border-radius: 5px; }
+.content .analysis {
+  margin-top: 20px;
+  padding: 20px 20px 30px 20px;
+  background-color: #F4F9FC;
+  border: 1px solid #337AC6;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=answer_analysis.css.map */
