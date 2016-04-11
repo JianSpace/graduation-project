@@ -22,3 +22,4 @@ item_num = item_transform[saveSelectedData[num]];</pre></code>
 ![](https://github.com/JianSpace/graduation-project/blob/master/screenshot/admin.png)
 
 没什么技术含量，纯粹copy and paste，数据也是直接用PHP echo到HTML里的。
+还有Bootstrap里table中td标签的vertical-align属性默认是top，会对td的align有影响。
