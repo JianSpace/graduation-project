@@ -1,7 +1,7 @@
 <?php
     session_start(); 
     require_once('../../connect.php');
-	$query = mysql_query("SELECT * FROM radioquestion ORDER BY id DESC");
+	$query = mysql_query("SELECT * FROM user");
 	
 	if ($query && mysql_num_rows($query)) {
 		while ($row = mysql_fetch_assoc($query)) {
@@ -22,8 +22,13 @@
 	<script type="text/javascript" src="\testbank/graduation-project/js/lib/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="\testbank/graduation-project/css/lib/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="\testbank/graduation-project/css/index.css">
-    <script type="text/javascript" src="js/testmanage.js"></script>
+    <script type="text/javascript" src="js/usermanage.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/testinput.css">
+	<style>
+		th,td {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 <!-- nav -->
@@ -85,12 +90,12 @@
 			<ul class="nav nav-sidebar">
 				<li><a href="testinput.php">试题录入</a></li>
                 <li><a href="testselect.php">试题查询</a></li>
-                <li  class="active"><a href="testmanage.php">试题管理</a></li>
+                <li><a href="testmanage.php">试题管理</a></li>
 				<li><a href="#">试题组卷</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
 				<li><a href="adduser.php">添加用户</a></li>
-				<li><a href="usermanage.php">用户管理</a></li>
+				<li class="active"><a href="usermanage.php">用户管理</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
 				<li><a href="#">设置</a></li>
@@ -100,22 +105,26 @@
 
 		<!-- sidebar-right -->
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		    <h1 class="page-header">试题管理</h1>
+		    <h1 class="page-header">用户管理</h1>
 
 		    <form class="form-horizontal" role="form" id="form-group">
 
 			    <div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">最近录入的试题</h3>
+						<h3 class="panel-title">全部用户</h3>
 					</div>
 					<div class="panel-body">
 						<table class="table table-hover">
 						    <!-- <caption>最近录入的试题</caption> -->
 						    <thead>
 						        <tr>
-						           <th class="col-sm-1">编号</th>
-						           <th class="col-sm-9">题目</th>
-						           <th class="col-sm-2">操作</th>
+							       <th>编号</th>
+						           <th>用户名</th>
+						           <th>密码</th>
+						           <th>姓名</th>
+						           <th>学院</th>
+						           <th>学科</th>
+						           <th>操作</th>
 						        </tr>
 						    </thead>
                             <tbody>
@@ -124,8 +133,12 @@
 									foreach($data as $value) {
 							?>
                                     <tr>
-                                        <td><?php echo $value['id'] ?></td>
-                                        <td><?php echo $value['title'] ?></td>
+	                                    <td><?php echo $value['id'] ?></td>
+                                        <td><?php echo $value['username'] ?></td>
+                                        <td><?php echo $value['password'] ?></td>
+                                        <td><?php echo $value['name'] ?></td>
+                                        <td><?php echo $value['academy'] ?></td>
+                                        <td><?php echo $value['subject'] ?></td>
                                         <td>
                                             <input type="button" class="btn btn-primary js-modify" value="修改">
                                             <input type="button" class="btn btn-danger js-delete" value="删除">

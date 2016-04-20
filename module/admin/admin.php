@@ -93,6 +93,10 @@ session_start();
 			<li><a href="testmanage.php">试题管理</a></li>
 		</ul>
 		<ul class="nav nav-sidebar">
+			<li><a href="adduser.php">添加用户</a></li>
+			<li><a href="usermanage.php">用户管理</a></li>
+		</ul>
+		<ul class="nav nav-sidebar">
 			<li><a href="#">设置</a></li>
 			<li><a href="#">帮助</a></li>
 		</ul>

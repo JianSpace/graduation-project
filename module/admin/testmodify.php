@@ -10,6 +10,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"> 
 	<title>试题修改</title>
 	<script type="text/javascript" src="\testbank/graduation-project/js/lib/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="\testbank/graduation-project/js/lib/bootstrap.js"></script>
